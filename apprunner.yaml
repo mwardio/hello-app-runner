@@ -1,15 +1,12 @@
 version: 1.0
-runtime: python311
+runtime: python3
 build:
   commands:
     build:
     - yum install -y pycairo
-    - pip3 install -r requirements.txt
+    - pip install -r requirements.txt
+    - pip install -y streamlit
 run:
-  runtime-version: 3.11
-  pre-run:  
-    - yum install -y pycairo
-    - pip3 install -r requirements.txt
-  command: python3 app.py #python -m streamlit hello --server.port=8000
+  command: python app.py #python -m streamlit hello --server.port=8000
   network:
     port: 8000
