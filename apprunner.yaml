@@ -5,7 +5,6 @@ build:
     build:
     - yum install -y pycairo
     - pip install -r requirements.txt
-    - pip install -y streamlit
 run:
   command: python app.py #python -m streamlit hello --server.port=8000
   network:
